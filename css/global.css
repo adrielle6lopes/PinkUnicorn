@@ -1,0 +1,259 @@
+    /* CSS do template do site */
+    /* CSS Reset */
+    /*estilo.css*/
+    
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        font-size: 100%;
+        text-decoration: none;
+        text-align: center;
+        list-style: none;
+        /*box-sizing: none;*/
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        box-sizing: border-box
+    }
+    
+    .img {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    
+    .logo {
+        height: 90px;
+        width: 320px;
+        margin: 0 auto;
+    }
+    
+    header,
+    nav {
+        padding-top: 20px;
+        padding-bottom: 15px;
+        border-bottom: 10px solid rgb(105, 72, 148);
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .fundo {
+        color: palevioletred;
+        background-color: purple;
+    }
+    
+    .formularioBusca {
+        position: relative;
+        float: left;
+        width: 50%;
+        height: 32px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .formularioBusca input {
+        text-align: left;
+        color: brown;
+        text-indent: 5px;
+        height: 30px;
+        border: none;
+        background-color: pink;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        padding: 2;
+    }
+    
+     ::-vebkit-input-placeholder {
+        color: purple;
+        font-weight: bold;
+        font-size: 0.8em;
+        font-style: normal;
+    }
+    
+    .botaoBusca {
+        background-image: url("img/buscar.png");
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+    }
+    /*global.css*/
+    
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        font-size: 16px;
+    }
+    /*a {
+    color: steelblue;
+    text-decoration: none;
+}
+a:hover {
+    color: orangered;
+    text-decoration: underline;
+}*/
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        margin: 1rem 0;
+    }
+    /* Fundo da pĆ�gina */
+    
+    body {
+        /*background-image: url('/img/fundo01.jpg');*/
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    /* Wrap */
+    
+    .wrap {
+        width: 100%;
+        max-width: 1024px;
+        margin: auto;
+        position: relative;
+        background: rgba(255, 255, 255, .8);
+    }
+    /* CabeĆ§alho (header) */
+    
+    .header h1 {
+        margin: 0;
+        text-align: center;
+        font-size: 2rem;
+    }
+    
+    .header small {
+        display: block;
+        font-size: .95rem;
+        font-weight: normal;
+        letter-spacing: .15rem;
+    }
+    /* Menu principal */
+    
+    .nav a {
+        display: inline-block;
+        color: palevioletred;
+        padding: .8rem;
+    }
+    
+    .nav a:hover,
+    .active {
+        background: powderblue;
+        text-decoration: none;
+    }
+    
+    .nav a:first-child {
+        margin-right: auto;
+    }
+    /* Menu responsivo */
+    
+    .nav {
+        position: relative;
+    }
+    
+    #navLinks {
+        position: absolute;
+        background: #333;
+        top: 3.3rem;
+        width: 70%;
+        box-shadow: -5px 5px 5px rgb(190, 190, 190);
+        right: 0;
+        display: none;
+        z-index: 20;
+    }
+    
+    #navLinks a {
+        display: block;
+    }
+    
+    #navLinks hr {
+        border: 0;
+        margin: 0;
+        width: 100%;
+        border-top: 1px dotted #ddd;
+    }
+    /* Comportamento em resoluĆ§Ćµes maiores */
+    
+    @media (min-width: 640px) {
+        #btnMenu,
+        #navLinks hr {
+            display: none;
+        }
+        #navLinks {
+            position: inherit;
+            background: transparent;
+            top: 0;
+            width: auto;
+            box-shadow: none;
+            display: block;
+        }
+        #navLinks a {
+            display: inline-block;
+        }
+    }
+    /* Fundo dos modais */
+    
+    .modal {
+        background: rgba(0, 0, 0, .6);
+        position: absolute;
+        top: 3.3rem;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 10;
+        display: none;
+    }
+    /* Footer */
+    
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #444;
+        color: white;
+    }
+    
+    .footer a {
+        color: white;
+        display: inline-block;
+        padding: .5rem;
+    }
+    
+    .footer a:hover {
+        background: black;
+    }
+    
+    .footer div {
+        text-align: center;
+    }
+    /* ConteĆŗdo central (main) */
+    
+    .main {
+        padding: 0 1.5rem;
+    }
+    /* classes de uso geral */
+    
+    .responsivo {
+        max-width: 100%;
+        height: auto;
+    }
+    /* Sticky footer - Footer fixo embaixo */
+    
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
+    
+    .main {
+        flex-grow: 1;
+    }
